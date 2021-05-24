@@ -1,0 +1,215 @@
+
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*TITLE STUFF------------------------------------------------*/
+
+/*Title and bold title text properties*/
+titleText, boldTitleText {
+    color: white;
+    font-family: Orbitron;
+    font-size: 10vw;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    position: relative;
+    animation-name: animationidk;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/*Makes bold part of the title bold lol*/
+boldTitleText {
+    font-weight: bold;
+}
+
+/*Box that holds the title*/
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*Animation for the title*/
+@keyframes animationidk {
+    0%      {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw white, 0 0 1vw white, 0 0 1.25vw white, 0 0 1.5vw white}
+    20%      {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw red, 0 0 1vw red, 0 0 1.25vw red, 0 0 1.5vw red}
+    40%     {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw green, 0 0 1vw green, 0 0 1.25vw green, 0 0 1.5vw green}
+    60%     {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw yellow, 0 0 1vw yellow, 0 0 1.25vw yellow, 0 0 1.5vw yellow}
+    80%     {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw blue, 0 0 1vw blue, 0 0 1.25vw blue, 0 0 1.5vw blue}
+    100%      {text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw white, 0 0 1vw white, 0 0 1.25vw white, 0 0 1.5vw white}
+}
+
+/*The Shadow of the tetrix title*/
+titleText::after, boldTitleText::after { /* https://www.geeksforgeeks.org/how-to-create-reflection-effect-using-html-and-css/ */
+    content: attr(data-text);
+    position: absolute;
+    top: 1vw;
+    left: 0;
+    text-align: center;
+    transform-origin: bottom;/* Change the position of transformed element */
+    transform: rotateX(180deg);/*  Rotates around x-axis */
+    line-height: 1em;/* linear-gradient defined by up,down,left ,right ,diagonal */
+    background-image: linear-gradient(00deg, #ffffff 0, transparent 95%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.7;
+}
+
+/*END OF TITLE STUFF------------------------------------------------*/
+
+/*TEXT STUFF---------------------------------------------------------------*/
+
+/*properties for button and body text*/
+buttonText, bodyText {
+    color: white;
+    font-family: Orbitron;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+}
+bodyText {
+    font-weight: normal;
+}
+
+/*Properties for welcome text ("WELCOME [Player Name]" on updateInfo screen)*/
+welcome {
+    font-family: Orbitron;
+    font-size: 3vw;
+    font-weight: bold;
+    color: white;
+}
+
+inputText {
+    font-family: Orbitron;
+    font-size: 1.5vw;
+    color: white;
+}
+/*END OF TEXT STUFF---------------------------------------------------------------*/
+
+/*BUTTON STUFF---------------------------------------------------------*/
+
+/*Container for sign up and log in buttons*/
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+/*Properties of log in, sign up, and shor buttons*/
+.logInButton, .signUpButton, .shortButton, .longButton, .deleteButton, .logOutButton, .startButton {
+    border: 0.25vw solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw;
+    transition-duration: 0.3s;
+}
+
+/*sets margins, height, and width of login and signup buttons */
+.logInButton, .signUpButton {
+    height: 4vw;
+    width: 15vw;
+    margin: 5%;
+}
+
+.shortButton, .logOutButton, .startButton {
+    height: 4vw;
+    width: 10vw;
+    margin: 2.5%;
+}
+
+.longButton, .deleteButton {
+    height: 4vw;
+    width: 20vw;
+    margin: 2.5%;
+}
+.logOutButton {
+    align-self: flex-end;
+}
+
+/*Adds shadow to sign up and log in buttons when hovering over them */
+.signUpButton:hover, .deleteButton:hover, .logOutButton:hover {
+    box-shadow: 0 0 0.25vw white, 0 0 0.75vw red, 0 0 1vw red;
+    text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw red, 0 0 1vw red, 0 0 1.25vw red, 0 0 1.5vw red, 0 0 1.75vw red;
+}
+.logInButton:hover, .longButton:hover {
+    box-shadow: 0 0 0.25vw white, 0 0 0.5vw green, 0 0 0.75vw green;
+    text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw green, 0 0 1vw green, 0 0 1.25vw green, 0 0 1.5vw green, 0 0 1.75vw green;
+}
+.shortButton:hover {
+    box-shadow: 0 0 0.25vw white, 0 0 0.5vw yellow, 0 0 0.75vw yellow;
+    text-shadow: 0 0 0.25vw #fff, 0 0 0.5vw #fff, 0 0 0.75vw yellow, 0 0 1vw yellow, 0 0 1.25vw yellow, 0 0 1.5vw yellow, 0 0 1.75vw yellow;
+}
+
+/*END OF BUTTON STUFF---------------------------------------------------------*/
+
+/*NAV BAR STUFF (Includes welcome text and account and play buttons*/
+.navBar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+/*Box that holds the welcome text ("Welcome [Player Name]")*/
+.welcomeContainer {
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+    padding: 1vw;
+}
+
+/*Button container for Play and Account Buttons*/
+.optionContainer {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+/*END OF NAV BAR STUFF------------------------------------------------*/
+
+/*Update Info stuff------------------------------------------------*/
+
+.updateInfo, .play {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 30vw;
+    margin: 2%;
+}
+input[type=text] {
+    width: 15vw;
+    background-color: black;
+    color: white;
+    font-family: Orbitron;
+    font-size: 1vw;
+    border: 0.2vw solid white;
+    border-radius: 0.5vw;
+    padding: 0.5vw;
+    margin: 2%;
+}
+
+/*END OF Update Info stuff------------------------------------------------*/
+
+/*Play container stuff-------------------------------------------------------*/
+
+/*Container for room code and player count */
+.roomInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+

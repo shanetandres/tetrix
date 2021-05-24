@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="en">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+        <title>Play</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+
+
+</head>
+<body>
+<div class = "navBar">
+    <div class = "welcomeContainer">
+        <welcome  id = "welcome">WELCOME, PLAYER</welcome>
+    </div>
+    <div class = "optionContainer">
+        <div class = "shortButton" id ="account">
+            <buttonText>Account</buttonText>
+        </div>
+        <div class = "shortButton" id = "play">
+            <buttonText>Play</buttonText>
+        </div>
+    </div>
+</div>
+
+<div class = "play">
+
+    <div class = "longButton">
+        <buttonText id = "createRoom">Create Room</buttonText>
+    </div>
+
+    <div class = "roomInfo">
+        <form>
+            <inputText>Room code:</inputText>
+            <input type = "text" id = "roomCode" name = "text">
+        </form>
+        <div class = "shortButton">
+            <buttonText id = "joinRoom" onclick = joinRoom()>Start</buttonText>
+        </div>
+    </div>
+
+</div>
+
+<div class="logOutButton" id = "logOut"  onclick = signOut()>
+    <buttonText>Log Out</buttonText>
+</div>
+</body>
+
+<script>
+    document.getElementById("createRoom").addEventListener("click", function(e) {
+        location.href = "index.html";
+    });
+
+
+    document.getElementById("account").addEventListener("click", function(e) {
+        location.href = "updateInfo.html";
+    });
+</script>
+
+<script src = "app.js"></script>
+
+</html>
+
+</title>
+</head>
+<body>
+
+
+
+</body>
+</html>
