@@ -2,53 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tetrix</title>
-
+    <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
     <!-- TODO: Add SDKs for Firebase products that you want to use
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
 
-
-
 </head>
 
+<body class="body">
 
+<div class="titleContainer">
+    <titleText data-text="TET">TET</titleText>
+    <boldTitleText data-text="RIX">RIX</boldTitleText>
+</div>
 
-
-<style type="text/css">
-    canvas {
-        background: black;
-
-    }
-    body {
-        margin: 0;
-        overflow: hidden;
-    }
-</style>
-<body>
-<canvas></canvas>
+<div class="buttonContainer">
+    <form>
+        <inputText>Email:</inputText>
+        <input type = "text" id = "email" name = "email">
+    </form>
+    <form>
+        <inputText>Password:</inputText>
+        <input type="text" id="password" name="password">
+    </form>
+    <form>
+        <inputText>Screen Name:</inputText>
+        <input type = "text" id = "screenName" name = "screenName">
+    </form>
+    <div class = "optionContainer">
+        <div class="logInButton" id = "logIn" onclick = logIn()>
+            <buttonText>Log In</buttonText>
+        </div>
+        <div class="signUpButton" id = "signUp" onclick = signUp()>
+            <buttonText>Sign Up</buttonText>
+        </div>
+    </div>
+</div>
 </body>
 
-
-
 <script>
-
-
-
-
 
 </script>
 
 <script src = "app.js"></script>
-</html>
 
+</html>

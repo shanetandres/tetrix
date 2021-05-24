@@ -126,7 +126,7 @@ function updateAccountInfo(){
 
 function signOut(){
     auth.signOut();
-    window.location.assign("home.html");
+    window.location.assign("index.html");
 }
 
 function joinRoom(){
@@ -172,12 +172,12 @@ auth.onAuthStateChanged(function(){
             });
         }
 
-        if(location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == "home.html" && document.getElementById("email").value == "") { //ensures that user will not be taken to updateInfo
+        if(location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == "index.html" && document.getElementById("email").value == "") { //ensures that user will not be taken to updateInfo
             // before the code assigns them a username in database
             window.location.assign("updateInfo.html");
         }
 
-        if(location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == "index.html"){
+        if(location.pathname.substring(location.pathname.lastIndexOf("/") + 1) == "gameBoard.html"){
             startGame();
         }
 
