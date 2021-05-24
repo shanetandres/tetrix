@@ -22,7 +22,7 @@ let highScore = 0;
 let screenName = null;
 let gamesWon = 0;
 
-
+//e (change)
 
 let canvas;
 let c;
