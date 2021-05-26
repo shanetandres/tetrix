@@ -678,6 +678,10 @@ function createBlock(inputColor, inputX, inputY){
 
 function redraw(){
 
+    if((dead[0].length/10) > 4){
+        blockSize = 30 * (4/(dead[0].length/10));
+    }
+
     c.clearRect(0, 0, canvas.width, canvas.height)
 
     c.font = "30px Orbitron";
